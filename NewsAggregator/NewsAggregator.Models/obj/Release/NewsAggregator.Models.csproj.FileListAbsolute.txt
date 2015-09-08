@@ -1,0 +1,14 @@
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\NewsAggregator.Models.dll.config
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\NewsAggregator.Models.dll
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\NewsAggregator.Models.pdb
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\EntityFramework.dll
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\EntityFramework.xml
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\obj\Release\NewsAggregator.Models.csprojResolveAssemblyReference.cache
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\obj\Release\NewsAggregator.Models.dll
+C:\Users\Keith\Source\Repos\NewsAgg\NewsAggregator\NewsAggregator.Models\obj\Release\NewsAggregator.Models.pdb
