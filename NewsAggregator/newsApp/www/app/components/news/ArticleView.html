@@ -1,0 +1,34 @@
+<ion-modal-view on-swipe-right="closeModal(likeDisLike())" cache-view="false">
+	<ion-header-bar class="bar-dark">
+        <h1><button class="button button-clear ion-chevron-left button-clear" ng-click="closeModal()"> Back to {{search}}</button></h1>
+    </ion-header-bar>
+	<ion-content style="background-color:#E2E3E1">
+		<h3 class="text-center"><b>{{currArticle.webTitle}}</b></h3>
+
+		<img style="height:auto; width:100%" src={{pic}}>
+		<style ng-if="inArticleView">img{height:auto; width:100%;}</style>
+		<p ng-bind-html=articleBody style="padding-left:20px; padding-right:20px; padding-top:10px; font-size:18px"></p>
+		<button class="button ion-thumbsup button-calm" type='button' ng-show="isLoggedIn()" ng-click='rateArticle(1, currArticle)' ng-if="currArticle.showRate"> Like</button>
+		<button class="button ion-thumbsdown button-assertive" type='button' ng-show="isLoggedIn()" ng-click='rateArticle(-1, currArticle)' ng-if="currArticle.showRate"> Dislike</button>
+		<button class="button ion-social-twitch-outline button-dark"type='button' ng-show="isLoggedIn()" ng-click='showEnterComment(currArticle)'> Comment</button>
+		<button class="button ion-social-twitch-outline button-dark"type='button' ng-show="isLoggedIn()" ng-click='shareArticle(currArticle)'> Share</button>
+		<a class="button button-positive button-clear button-block " ng-hide="isLoggedIn()" ng-click="openModal2()" href="">Create an account to leave a comment.</a>
+		<h4 class="text-left" style="padding:30px; padding-left:-60px; padding-bottom:0px">Comments</h4>
+		<div ng-repeat="items in comments">
+			<style>blockquote{font-size:14px; text-align:left;}</style>
+			<style>q{font-size:16px;}</style>
+			<style>h2{font-size:20px;}</style>
+			<style>.reply{width:55px; height:10px; font-size:12px;}</style>
+			<div style="padding-bottom:20px">
+				<ion-item class="item-text-wrap">
+					<div class="row">
+						<div class="col-25"><h2><b>{{items[0]}} </b></h2></div>
+						<div class="col-50"></div>
+						<div class="col-25"><button class="myButton button button-small button-round button-dark reply ion-ios-chatboxes-outline button-stable" ng-click="showEnterComment(currArticle, &#34<blockquote><h2><b>{{items[0]}}</b></h2><p>{{items[1]}}</p></blockquote>&#34)"> Reply</button></div>
+						</div>
+						<q ng-bind-html=items[1] style="padding:1px"></q>
+				</ion-item>
+			</div>
+		</div>
+	</ion-content>
+</ion-modal-view>

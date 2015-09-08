@@ -1,0 +1,42 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-social-buffer" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">News2Go Menu</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close ng-hide="isLoggedIn()" ng-click="openModal1()">
+          <i class="icon ion-checkmark menuIcon">  Login</i>
+        </ion-item>
+        <ion-item menu-close ng-show="isLoggedIn()" ng-click="logoutUser()">
+          <i class="icon ion-close-round menuIcon">  Logout</i>
+        </ion-item>
+        <ion-item menu-close href="#/app/news">
+          <i class="icon ion-ios-book menuIcon">  News</i>
+        </ion-item>
+        <ion-item menu-close ng-show="isLoggedIn()" href="#/app/selectCategories">
+          <i class="icon ion-archive menuIcon">  Select Categories</i>
+        </ion-item>
+        <ion-item menu-close ng-show="isLoggedIn()" href="#/app/requests">
+          <i class="icon ion-ios-heart menuIcon">  Friend Requests</i>
+        </ion-item>
+        <ion-item menu-close ng-show="isLoggedIn()" href="#/app/settings">
+          <i class="icon ion-ios-gear menuIcon">  Settings</i>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+

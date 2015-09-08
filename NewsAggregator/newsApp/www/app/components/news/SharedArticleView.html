@@ -1,0 +1,30 @@
+<ion-modal-view on-swipe-right="closeArticles()">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<button class="button button-clear button-poitive ion-chevron-left" ng-click="closeArticles()"> Categories</button>
+		<h1 class="title text-center" ng-bind-html=search><b>{{search}}</b></h1>
+    </ion-header-bar>
+    <ion-content class="has-header" padding="true">
+    	
+    	<div ng-repeat="items in sharedArticles">
+            <ion-item>Recommended by {{sharers[0]}}</ion-item>
+        	<ion-item menu-close ng-click="showArticle(items, items.webTitle)" ng-if="items.webTitle.indexOf('quiz') == -1" class="item-text-wrap">
+        	<a>
+        		<div class="row">
+        			<div class="col"><img src="{{items.fields.thumbnail}}"></div>
+        			<div class="col text-centers"><h2><b>{{items.webTitle}}</b></h2></div>
+        		</div>
+        		<div class="row">
+        			<div class="col">
+        				<p ng-bind-html=items.fields.trailText>{{items.fields.trailText}}</p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<div class="col text-right">
+        				<h2><i class="icon ion-thumbsup calm"> {{items.ratings.like}} </i><i class="icon ion-thumbsdown assertive"> {{items.ratings.dislike}}</i></h2>
+        			</div>
+        		</div>
+        	</a>
+        </ion-item>
+    	</div>
+    </ion-content>
+</ion-modal-view>

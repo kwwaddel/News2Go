@@ -1,0 +1,38 @@
+<ion-view title="News2Go">
+<ion-header-bar class="bar-light bar-subheader">
+<label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" placeholder="Search" data-ng-model="searchTarget">
+    </label>
+    <button class="button button-balanced" style="height:50px; width:75px; font-size:20px" ng-click="showArticles(searchTarget)" ng-if="searchTarget.length" value="Reset"> GO
+    </button>
+</ion-header-bar>
+	<ion-content>
+		<button ng-click="jsTest()">TEST</button>
+		<table id="tableContainer">
+		</table>
+		<div ng-repeat="category in catList">
+			<ion-item ng-if="category.checked" class="text-center" style="font-weight:bold" ng-click="showArticles(category.name)">
+				<div class="row">
+					<div class="col-25 larger" ng-bind-html=category.icon>{{category.icon}}</div>
+					<div class="col-50 text-center">{{category.name}}</div>
+					<div class="col-25"></div>
+				</div>
+			</ion-item>
+		</div>
+		<ion-item ng-show="isLoggedIn()" class="text-center" style="font-weight:bold" ng-click="getCommentedArticles()">
+				<div class="row">
+					<div class="col-25 larger"><i class="icon ion-social-twitch-outline"></i></div>
+					<div class="col-50 text-center"> My Commented</div>
+					<div class="col-25"></div>
+				</div>
+		</ion-item>
+		<ion-item class="text-center" ng-show="isLoggedIn()" style="font-weight:bold" ng-click="showArticles(false)">
+				<div class="row">
+					<div class="col-25 larger assertive">{{unreadShared}}</div>
+					<div class="col-50 text-center">Shared</div>
+					<div class="col-25"></div>
+				</div>
+		</ion-item>
+	</ion-content>
+</ion-view>

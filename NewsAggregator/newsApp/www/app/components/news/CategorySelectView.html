@@ -1,0 +1,9 @@
+<ion-view title="Select Catecories">
+	<ion-content >
+		<ion-checkbox style="font-size:20px" ng-repeat="item in catList"
+                      ng-model="item.checked" 
+                      ng-checked="item.checked">
+          <label style="font-size:20px" ng-bind-html=item.icon></label> {{ item.name }}
+        </ion-checkbox>
+	</ion-content>
+</ion-view>

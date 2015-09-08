@@ -1,0 +1,6 @@
+<ion-view>
+	<ion-content>
+    <ion-checkbox ng-if="!friend.resolved" ng-model="friend.checked" ng-repeat="friend in acceptedReqs">{{friend.name}}</ion-checkbox>
+    <button class="button button-balanced" style="height:50px; width:75px; font-size:20px" ng-if="!isResolved && acceptedReqs" ng-click="addFriends()">Save</button>
+    </ion-content>
+</ion-view>

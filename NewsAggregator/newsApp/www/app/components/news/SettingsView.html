@@ -1,0 +1,16 @@
+<ion-view>
+<ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-social-buffer" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+<ion-content>
+	<ion-item menu-close ng-click="addFriend()">
+          <i class="icon ion-ios-personadd menuIcon"> Add Friend</i>
+    </ion-item>
+    <ion-item ng-show="showButton" ng-click="showFriends()"><i class="icon ion-ios-people menuIcon"> Show Friends</i></ion-item>
+    <ion-item ng-repeat="friend in friends">
+    {{friend.TargetName}}
+</ion-item>
+<ion-item ng-click="showFriends()"><i class="icon ion-android-refresh menuIcon"> Refresh</i></ion-item>
+</ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+.middle > * {
+  vertical-align: middle;
+}
+
+a{
+	color: orange;
+}
+
+.larger{
+	font-size: 32px;
+	text-align: right;
+}
+
+.menuIcon{
+	font-size: 	22px;
+	text-align: right;
+}
+
+.wider{
+	width: 200px;
+}
