@@ -459,33 +459,6 @@
             })
         };
 
-        $scope.jsTest = function() {
-            
-            var sortedList = [1,2,3,4,5,6,7,8,9];
-            var searchTarget = 0;
-
-            console.log("index: " + binSearch(sortedList, searchTarget, 0, sortedList.length));
-
-            
-        };
-
-        function binSearch(list, target, min, max)
-        {
-            if (max <= min)
-                return -1;
-            else
-            {
-                var mid = Math.trunc((max + min) / 2);
-                console.log(mid);
-
-                if (list[mid] > target)
-                    return binSearch(list, target, min, max - 1);
-                else if (list[mid] < target)
-                    return binSearch(list, target, mid + 1, max);
-                else
-                    return mid;
-            }
-        }
 
         $scope.showEnterComment = function(article) {
             $scope.data = {};
